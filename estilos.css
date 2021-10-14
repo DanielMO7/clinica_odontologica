@@ -1,0 +1,567 @@
+/*MENU*/
+
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+}
+
+body.menu{
+	font-family: 'Montserrat', sans-serif;
+}
+
+nav{
+	height: 80px;
+	width: 100vw;
+	background: #2081C3;
+}
+
+label.logo{
+	font-size: 35px;
+	font-weight: bold;
+	color: white;
+	padding: 0 50px;
+	line-height: 80px;
+}
+
+nav ul{
+	float: right;
+	margin-right: 40px;
+}
+
+nav li{
+	display: inline-block;
+	margin: 0 8px;
+	line-height: 80px;
+}
+
+nav a{
+	color: white;
+	font-size: 18px;
+	text-transform: uppercase;
+	border: 1px solid transparent;
+	padding: 7px 10px;
+	border-radius: 3px;
+}
+
+a.active,a:hover{
+	border: 1px solid #F7F9F9;
+	transition: .5s;
+}
+
+nav #icon{
+	color: white;
+	font-size: 30px;
+	line-height: 80px;
+	float: right;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+}
+
+@media (max-whidth 1048px){
+	label.logo{
+		font-size: 32px;
+		padding-left: 60px;
+	}
+}
+
+nav ul{
+	margin-right: 20px;
+}
+
+nav a{
+	font-size: 17px;
+}
+
+@media (max-width: 909px){
+
+	nav #icon{
+		display: block;
+	}
+
+	nav ul{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: #AACDC8;
+		top: 80px;
+		left: -100%;
+		text-align: center;
+		transition: all .5s;
+	}
+
+	nav li{
+		display: block;
+		margin: 50px 0;
+		line-height: 30px;
+	}
+
+	nav a{
+		font-size: 20px;
+	}
+
+	a.active,a:hover{
+		border: none;
+		color: #3498db;
+
+	}
+
+	nav ul.show{
+		left: 0;
+	}
+}
+
+iframe{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #111;
+	height: auto;
+	width: 100vw;
+}
+
+/*slider*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+}
+
+body.slider{
+	font-family: 'Montserrat', sans-serif;
+	background: #f2f2f2;
+	width: 800px;
+	padding: 30px;
+	margin: 100px;
+}
+
+.contenedor{
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	overflow: hidden;
+}
+
+.contenido-slider{
+	width: 100%;
+	height: 306px;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-end;
+	flex-shrink: 0;
+	background: url(imagenes/cafe.jpg);
+	color: white;
+	background-repeat: none;
+	font-size: 120%;
+}
+
+.contenido-slider:nth-child(2){
+	background: url(imagenes/cepillando.jpg);
+	color: white;
+}
+
+.contenido-slider:nth-child(3){
+	background: url(imagenes/dientes-manos.jpg);
+	color: white;
+}
+
+.slider-contenedor{
+	width: 100%;
+	display: flex;
+}
+
+.contenido-slider > div{
+    width: 100%;
+    padding: 10px;
+}
+
+.contenido-slider h1{
+	font-weight: 200;
+	text-align: justify;
+	line-height: 30px;
+}
+
+@media screen and (max-width:600px){
+    .contenido-slider{
+       flex-direction: column-reverse;
+    }
+
+    .contenido-slider > div{
+        width: 80%;
+    }
+
+}
+
+/*CONTENIDO*/
+
+.introduccion {
+	background-color: ;
+	width: 100%;
+	text-align: center ;
+	padding: 50px;
+}
+
+.introduccion p{
+	text-align: left;
+	color: black;
+	font-size: 18px;
+	text-transform: ;
+	border: 1px solid transparent;
+	padding: 4px 7px;
+	border-radius: 3px;
+}
+
+div.contenido-web{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.contenido-web h1{
+	text-align: center;
+
+}
+
+.contenido-web{
+	width: 100vw;
+}
+
+
+.container{
+	width: 100%;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	max-width: 1100px;
+	margin: auto;
+
+}
+
+.container a{
+	color: white;
+	font-size: 18px;
+	text-transform: uppercase;
+	border: 1px solid transparent;
+	padding: 7px 10px;
+	border-radius: 3px;
+	opacity: 100%;
+}
+
+.box{
+	width: 190px;
+	height: 190px;
+	position: relative;
+	overflow: hidden;
+	margin: 20px;
+	border: 3px solid #2081C3;
+	border-radius: 900px;
+
+}
+
+.box img{
+	width: 180px;
+	height: 200px;
+	border-radius: 900px;
+}
+
+.capa{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #2081C3;
+	opacity: 0.8;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	transform: scale(0);
+	transition: .3s ease;
+	border-radius: 400px;
+	
+}
+
+.box:hover .capa{
+	transform: scale(1);
+	border-radius: 800px;
+}
+
+/*Contenido tratamiento*/
+
+.contenido-tratamiento{
+	
+}
+
+.contenido-tratamiento img{
+	width: 652px;
+	height: 355px;
+}
+
+.text-trat {
+	height: 500px;
+}
+
+
+/*Call center*/
+
+body .call-center{
+    background-color: white; 
+    box-sizing: center;
+    height: 530px;
+    padding-left: 20px;
+}
+
+h1.call-center{
+	padding: 20px;
+}
+     .call-center form{
+            background-color: #63D2FF;
+            border-radius: 9px;
+            color: black;
+            font-size: 18px;
+            padding: 20px;
+            margin:  0;
+            width: 1000px;
+            height: 430px;
+            box-sizing: border-box;
+        }
+
+        input, textarea{
+            border: 0;
+            outline: none;
+
+            width: 500px;
+        }
+
+        .field{
+            border: solid 1px #ccc;
+            padding: 10px;
+
+            
+        }
+
+        .field:focus{
+            border-color: #2081C3;
+        }
+
+        .center-content{
+            text-align: center;
+        }
+
+
+.btn{
+    border-radius: 3px;
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    width: 100px;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    font-size: 1.2em;
+ 
+}
+
+.btn-green{
+    color: white;
+    background-color: #2081C3;
+}
+
+.btn-green:hover{
+    background-color: #1A6CA2;  
+}
+
+.call-center p{
+	font-size: 18px;
+}
+
+div.contactenos{
+	padding: 20px;
+}
+
+.contactenos h2{
+	text-align: center;
+	font-size: 30px;
+}
+
+.contactenos{
+	height: 400px;
+	width: 900px;
+	padding: 20px;
+    margin:  0;
+	background: #D7F9F9;
+	font-size: 27px;
+	color: black;
+	border: 1px solid transparent;
+	border-radius: 3px;
+}
+
+.contactenos a{
+	font-size: 27px;
+	color: black;
+	border: 1px solid transparent;
+	padding: 7px 10px;
+	border-radius: 3px;
+}
+
+.contactenos a:active{
+	background: #2081C3;
+}
+
+/*REGISTRO*/
+.registro{
+	text-align: center;
+	height: 800px;
+	font-size: 20px;
+}
+
+.registro input[type="text"], input[type="password"]{
+	outline: none;
+	padding: 15px;
+	display: block;
+	width: 700px;
+	border-radius: 3px;
+	border: 1px solid #00b8eb;
+	margin: 20px auto;
+}
+.registro input[type="submit"]{
+	padding: 10px;
+	color: #fff;
+	background: #2081C3;
+	width: 700px;
+	margin: 20px auto;
+	margin-top: 0;
+	border: 0;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.registro input[type="submit"]:hover{
+	background-color: #00b8eb;
+}
+
+.registro select{
+	text-align: center;
+	padding: 10px;
+	color: #fff;
+	background: #2081C3;
+	width: 700px;
+	margin: 20px auto;
+	margin-top: 0;
+	border: 0;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.registro select:hover{
+	background-color: #00b8eb;
+}
+
+.registro a{
+	color: #2081C3;
+	font-size: 18px;
+	border: 1px solid transparent;
+	padding: 7px 10px;
+	border-radius: 3px;
+	opacity: 100%;
+}
+.registro h1{
+	text-align: center;
+}
+
+.info{
+	padding: 20px;
+	text-align: center;
+}
+
+/*FOOTER*/
+
+body.footer{
+	background: #fcfcfc;
+}
+
+footer{
+	position: relative;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #111;
+	height: auto;
+	width: 100vw;
+	font-family: "Open Sans";
+	padding-top: 20px;
+	color: #FFF;
+}
+
+.footer-content{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+.footer-content h3{
+	font-size: 1.8rem;
+	font-weight: 400;
+	text-transform: capitalize;
+	line-height: 3rem;
+}
+
+.footer-content p{
+	max-width: 500px;
+	margin: 10px auto;
+	line-height: 28px;
+	font-size: 14px;
+}
+
+.socials{
+	list-style: none;
+	display: flex;
+	align-items: center;
+	margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+	margin: 0 10px;
+}
+
+.socials a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.socials a i{
+	font-size: 1.1rem;
+	transition: color .4px ease;
+}
+
+.socials a:hover i{
+	color: aqua;
+}
+
+.footer-botton{
+	background: #000;
+	width: 100vw;
+	padding: 10px 0;
+	text-align: center;
+}
+
+.footer-botton{
+	font-size: 14px;
+	word-spacing: 2px;
+	text-transform: capitalize;
+}
+
+.footer-botton span{
+	text-transform: uppercase;
+	opacity: .4;
+	font-weight: 200;
+}
+
