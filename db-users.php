@@ -5,13 +5,14 @@
 	<meta charset="utf-8">
 </head>
 <body>
+    <!--MD5 enripta las contraseñas-->
 <?php 
 
-	$conexion = mysqli_connect("localhost:3307", "root", "", "odontomax") or die ("Problemas con la conexion");
+	$conexion = mysqli_connect("localhost:3306", "root", "", "odontomax") or die ("Problemas con la conexion");
 
-	mysqli_query($conexion, "insert into usuarios(nombre, email, num_tel, identificacion, edad, password, tratamiento) values('$_REQUEST[nombre]', '$_REQUEST[email]', '$_REQUEST[num_tel]', '$_REQUEST[identificacion]', '$_REQUEST[edad]', '$_REQUEST[password]', '$_REQUEST[tratamiento]')")or die("echo <script>
+	mysqli_query($conexion, "insert into usuarios(nombre, email, num_tel, identificacion, edad, password, tratamiento) values('$_REQUEST[nombre]', '$_REQUEST[email]', '$_REQUEST[num_tel]', '$_REQUEST[identificacion]', '$_REQUEST[edad]', '$_REQUEST [password]', '$_REQUEST[tratamiento]')")or die("echo <script>
                 alert('Parece que has ingresado informacion invalida. Por favor llena todos los campos.');
-                window.location= 'registro.php'
+                window.locatio= 'registro.php'
     </script>" .mysqli_error($conexion));
 
 	mysqli_close($conexion);
