@@ -5,9 +5,9 @@
 	$usuario = $_POST['email'];
 	$pass = $_POST['password'];
 
-	$conexion = new mysqli("localhost:3307", "root", "", "odontomax");
+	$conexion = new mysqli("localhost:3306", "root", "", "odontomax");
 
-	$proceso = mysqli_query($conexion, "SELECT * FROM usuarios WHERE email = '$usuario' AND password = '$pass'")or die("Problemas en el select: ".mysql_error($conexion));
+	$proceso = mysqli_query($conexion, "SELECT * FROM usuarios WHERE email = '$usuario' AND password = MD5('$pass')")or die("Problemas en el select: ".mysql_error($conexion));
 
 	if ($resultado = mysqli_fetch_array($proceso)) {
 		$_SESSION['u_usuario'] = $usuario;
