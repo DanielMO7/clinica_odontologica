@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<title>OdontoMax</title>
@@ -11,15 +12,16 @@
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  	<script>
-  		$(document).ready(function(){
-  			$('#icon').click(function(){
-  				$('ul').toggleClass('show');
-  			});	
-  		});
-  	</script>
+	<script>
+		$(document).ready(function() {
+			$('#icon').click(function() {
+				$('ul').toggleClass('show');
+			});
+		});
+	</script>
 
 </head>
+
 <body class="menu">
 
 	<nav>
@@ -32,28 +34,25 @@
 
 			<li><a href="contactanos.php">Contactanos</a></li>
 
-			<?php 
+			<?php
 
 			session_start();
 
-			if (isset($_SESSION['u_usuario'])){
-
-			}else{	
+			if (isset($_SESSION['u_usuario'])) {
+			} else {
 				echo "<li><a href='login.php'>Loguéate</a></li>";
 				echo "<li><a class='active' href='registro.php'>Regístrate</a></li>";
 			}
-			 ?>
-			<?php 
+			?>
+			<?php
 
-			if (isset($_SESSION['u_usuario'])){
+			if (isset($_SESSION['u_usuario'])) {
 
- 			echo "<li><a href='cerrar-session.php'>Salir</a></li>";
-
-			}else{	
-
+				echo "<li><a href='cerrar-session.php'>Salir</a></li>";
+			} else {
 			}
-			
-			 ?>
+
+			?>
 
 		</ul>
 
@@ -65,21 +64,18 @@
 
 	</nav>
 
-</body>	
+</body>
 
- <?php 
+<?php
 
-	if (isset($_SESSION['u_usuario']))
-	{
- 	echo "<script>
+if (isset($_SESSION['u_usuario'])) {
+	echo "<script>
                 alert('Tu ya iniciaste sesion exitosamente, no necesitas registrarte, gracias por preferirnos.');
                 window.location= 'index.php'
     </script>";
-
-	}else{
-
-	}
- ?>
+} else {
+}
+?>
 
 <body class="register">
 
@@ -89,64 +85,66 @@
 
 		<h1>Registrarse</h1>
 
-			<span> o <a href="Login.php">Loguearse</a></span>
+		<span> o <a href="Login.php">Loguearse</a></span>
 
-				<form action="db-users.php" method="post">
+		<form action="db-users.php" method="post">
 
-					<input type="text" name="nombre" placeholder="Ingrese su nombre completo">
+			<input type="text" name="nombre" placeholder="Ingrese su nombre completo">
 
-					<input type="text" name="email" placeholder="Ingrese su correo electronico">
+			<input type="text" name="email" placeholder="Ingrese su correo electronico">
 
-					<input type="text" name="num_tel" placeholder="Ingrese numero telefonico">
+			<input type="text" name="num_tel" placeholder="Ingrese numero telefonico">
 
-					<input type="text" name="identificacion" placeholder="Ingrese su numero de identificacion">
+			<input type="text" name="identificacion" placeholder="Ingrese su numero de identificacion">
 
-					<input type="text" name="edad" placeholder="Ingrese su edad">
+			<input type="text" name="edad" placeholder="Ingrese su edad">
 
-					<input type="password" name="password" placeholder="Crea tu contraseña">
+			<input type="password" name="password" placeholder="Crea tu contraseña">
 
-						Seleccione el tratamiento:
+			Seleccione el tratamiento:
 
-							<br>
+			<br>
 
-								<br>
+			<br>
 
-						<select name="tratamiento">
+			<select name="tratamiento">
 
-							<option value="Implantes">Implantes.</option>
+				<option value="Implantes">Implantes.</option>
 
-								<option value="Ortodoncia">Ortodoncia.</option>
+				<option value="Ortodoncia">Ortodoncia.</option>
 
-									<option value="Periodoncia">Periodoncia.</option>
+				<option value="Periodoncia">Periodoncia.</option>
 
-										<option value="Rehabilitación">Rehabilitación.</option>
+				<option value="Rehabilitación">Rehabilitación.</option>
 
-											<option value="Endodoncia">Endodoncia.</option>
+				<option value="Endodoncia">Endodoncia.</option>
 
-												<option value="valoración">Cita de valoración.</option>
+				<option value="valoración">Cita de valoración.</option>
 
-						</select>
+			</select>
 
-							<br>
+			<br>
 
-					<input type="submit" value="Enviar">
-	</div>	
-</body>
-<br/><hr color="2081C3">
-
-	<div class="info">
-				<h2>Contactanos:</h2>
-
-				<p>Teléfono: 3104871122</p>
-
-				<p>Call-center: 3135555</p>
-
-				<p>Correo electrónico: odontomax@gmail.com.co</p>
-				
-				<p>Dirección: Calle 40-20 a 85 – Dosquebradas.</p>
+			<input type="submit" value="Enviar">
 	</div>
+</body>
+<br />
+<hr color="2081C3">
 
-	<br/><hr color="2081C3">
+<div class="info">
+	<h2>Contactanos:</h2>
+
+	<p>Teléfono: 3104871122</p>
+
+	<p>Call-center: 3135555</p>
+
+	<p>Correo electrónico: odontomax@gmail.com.co</p>
+
+	<p>Dirección: Calle 40-20 a 85 – Dosquebradas.</p>
+</div>
+
+<br />
+<hr color="2081C3">
 
 <body class="footer">
 
@@ -156,21 +154,21 @@
 
 			<h3>OdontoMax</h3>
 
-				<p>Trabajamos diariamente para mejorar tu sonrrisa</p>
+			<p>Trabajamos diariamente para mejorar tu sonrrisa</p>
 
-					<ul class="socials">
+			<ul class="socials">
 
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 
-						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+				<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 
-						<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+				<li><a href="#"><i class="fa fa-youtube"></i></a></li>
 
-						<li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+				<li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
 
-					</ul>
+			</ul>
 		</div>
 
 		<div class="footer-botton">
@@ -181,4 +179,5 @@
 
 	</footer>
 </body>
+
 </html>
