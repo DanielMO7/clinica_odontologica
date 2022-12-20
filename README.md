@@ -1,5 +1,5 @@
 # proyecto_odontologia
-Proyecto de web para una clínica odontológica.
+Proyecto web para una clínica odontológica.
 Esta es una web diseñada en PHP vanilla muy básico, en la cual se brinda información al usuario de los diferentes procesos de odontología con los que cuenta la tienda.
 Cuenta con tres formularios:
   - Formulario de registro.
